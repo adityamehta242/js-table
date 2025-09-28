@@ -1,0 +1,51 @@
+{
+  "name": "@adityamehta/js-table",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/types/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/types/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "clean": "del-cli ./lib",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > ./lib/cjs/package.json",
+    "build:types": "tsc -p ./tsconfig.types.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:types",
+    "test": "npm run test:esm && npm run test:cjs",
+    "test:esm": "node --test ./tests/esm/*.test.js",
+    "test:cjs": "node --test ./tests/cjs/*.test.js",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "lib/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityamehta242/js-table.git"
+  },
+  "keywords": [],
+  "author": "aditya-mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adityamehta242/js-table/issues"
+  },
+  "homepage": "https://github.com/adityamehta242/js-table#readme"
+}
