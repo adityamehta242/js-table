@@ -1,7 +1,12 @@
 {
   "name": "@adityamehta/js-table",
   "version": "0.0.2",
-  "keywords": ["table", "data", "javascript", "typescript"],
+  "keywords": [
+    "table",
+    "data",
+    "javascript",
+    "typescript"
+  ],
   "description": "A JavaScript table library with TypeScript support",
   "type": "module",
   "main": "./lib/cjs/index.js",
@@ -28,7 +33,9 @@
     "test": "npm run test:esm && npm run test:cjs",
     "test:esm": "node --test ./tests/esm/*.test.js",
     "test:cjs": "node --test ./tests/cjs/*.test.js",
-    "prepack": "npm run build"
+    "test:coverage": "node --test --experimental-test-coverage ./tests/",
+    "prepack": "npm run build",
+    "prepare": "husky"
   },
   "files": [
     "lib/**/*",
@@ -36,7 +43,8 @@
     "LICENSE"
   ],
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   },
   "repository": {
     "type": "git",
@@ -49,8 +57,18 @@
   },
   "homepage": "https://github.com/adityamehta242/js-table#readme",
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^20.0.0",
+    "husky": "^9.1.7",
     "rimraf": "^5.0.10",
     "typescript": "^5.9.2"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }

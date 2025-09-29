@@ -1,7 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "NodeNext",
-    "outDir": "./lib/cjs"
+    "module": "CommonJS",
+    "target": "ES2022",
+    "outDir": "./lib/cjs",
+    "declaration": false,
+    "declarationMap": false
   }
 }

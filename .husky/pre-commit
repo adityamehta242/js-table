@@ -1,0 +1,5 @@
+# Lint staged files
+npx lint-staged
+
+# Run tests for changed files only (if you have this setup)
+# npm test -- --changedSince=HEAD~1
