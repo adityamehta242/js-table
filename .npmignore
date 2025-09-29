@@ -1,2 +1,33 @@
-note.txt
+# Source files (since we publish compiled lib/)
+src/
+tests/
+
+# TypeScript configs
+tsconfig*.json
+
+# Development files
+.vscode/
+.idea/
 todo
+note.txt
+
+# Build artifacts not needed
+*.tsbuildinfo
+
+# Git and npm files
+.git/
+.gitignore
+
+# OS files  
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env*

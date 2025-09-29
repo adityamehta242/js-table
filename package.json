@@ -1,7 +1,8 @@
 {
   "name": "@adityamehta/js-table",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "keywords": ["table", "data", "javascript", "typescript"],
+  "description": "A JavaScript table library with TypeScript support",
   "type": "module",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -19,7 +20,7 @@
     }
   },
   "scripts": {
-    "clean": "del-cli ./lib",
+    "clean": "rimraf ./lib",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "build:cjs": "tsc -p ./tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > ./lib/cjs/package.json",
     "build:types": "tsc -p ./tsconfig.types.json",
@@ -41,11 +42,15 @@
     "type": "git",
     "url": "git+https://github.com/adityamehta242/js-table.git"
   },
-  "keywords": [],
   "author": "aditya-mehta",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adityamehta242/js-table/issues"
   },
-  "homepage": "https://github.com/adityamehta242/js-table#readme"
+  "homepage": "https://github.com/adityamehta242/js-table#readme",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "rimraf": "^5.0.10",
+    "typescript": "^5.9.2"
+  }
 }
