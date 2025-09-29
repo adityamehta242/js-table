@@ -32,7 +32,7 @@
     "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:types",
     "test": "npm run test:esm && npm run test:cjs",
     "test:esm": "node --test ./tests/esm/*.test.js",
-    "test:cjs": "node --test ./tests/cjs/*.test.js",
+    "test:cjs": "node --test ./tests/cjs/*.test.cjs",
     "test:coverage": "node --test --experimental-test-coverage ./tests/",
     "prepack": "npm run build",
     "prepare": "husky"
@@ -60,6 +60,7 @@
     "@biomejs/biome": "^2.2.4",
     "@types/node": "^20.0.0",
     "husky": "^9.1.7",
+    "prettier": "^3.6.2",
     "rimraf": "^5.0.10",
     "typescript": "^5.9.2"
   },
