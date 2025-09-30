@@ -1,4 +1,5 @@
 # Source files changed, running full checks...
 npx tsc --noEmit
 npm test
+# Remove "npm run build" for faster pushes
 npm run build

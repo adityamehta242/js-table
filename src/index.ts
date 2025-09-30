@@ -1,3 +1,3 @@
 export function createTable() {
-  return 'Hello from js-table';
+  return 'Hello from table';
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@adityamehta/js-table",
+  "name": "@adityamehta/table",
   "version": "0.0.2",
   "keywords": [
     "table",
@@ -48,14 +48,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adityamehta242/js-table.git"
+    "url": "git+https://github.com/adityamehta242/table.git"
   },
   "author": "aditya-mehta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adityamehta242/js-table/issues"
+    "url": "https://github.com/adityamehta242/table/issues"
   },
-  "homepage": "https://github.com/adityamehta242/js-table#readme",
+  "homepage": "https://github.com/adityamehta242/table#readme",
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
     "@types/node": "^20.0.0",
